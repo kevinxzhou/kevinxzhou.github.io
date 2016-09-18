@@ -28,6 +28,7 @@ html {
 height: 100%;
 width: 100%;
 background: white;
+overflow: hidden;
 }
 body {
   height: calc(100% - 8em);
@@ -110,8 +111,9 @@ hr {
   border: none;
 background-color: #ccc;
 color: white;
-height: 1px;
+height: 2px;
 width: calc(100% - 4em);
+opacity: 0.5;
 }
 
 .logo {
