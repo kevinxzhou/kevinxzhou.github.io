@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Multilingo</title>
+  <link rel="stylesheet" href="css/story.css">
+  <link rel="stylesheet" href="css/jquery.toolbar.css">
+  <link rel="icon"
+  type="image/png"
+  href="img/favicon.png">
+</head>
+
+<nav>
+  <ul>
+    <li><a href="#" class="logo">Multilingo</a></li>
+    <strong>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Learn</a></li>
+      <li><a href="#">Developers</a></li>
+      <li><a href="#">Log Out</a></li>
+    </strong>
+  </ul>
+  <hr noshade>
+</nav>
+
+
+<body>
+<h1>
+  Découverte de Franklin navires de l'expédition oppose la science contre le tourisme
+</h1>
+<div id="mainbox">
+  <div class="card" ng-repeat="story in [1,2,3,4,5]">
+    <p>
+      &emsp;La <span id="element">découverte</span> du navire de Sir John Franklin HMS Terror cette semaine, avec le HMS Erebus il y a deux ans, de fournir des outils précieux pour déverrouiller le mystère de l'expédition de 1845 condamné. Maintenant que leurs emplacements sont connus, les épaves deviendront probablement des destinations populaires pour l'industrie du tourisme dans l'Arctique de plus en plus, ce qui sera un défi pour leur préservation. <br><br>&emsp; Merci aux eaux froides de l'Arctique, claires, les deux navires ont été conservés dans un état remarquable, en particulier la Terreur. Sa coque en bois est donc intact, il semble que cela pourrait être renflouée. Les trois mâts sont encore debout, et les fenêtres ne sont pas brisés. En fait, la préservation est si bon, les archéologues attendent à trouver des objets à l'intérieur aussi détaillé que les documents écrits toujours couché dans les tiroirs. Les navires sont des capsules de temps incroyables. Bahman Golbarnezhad, 48 ans, est décédé après avoir eu un accident alors qu'il prenait part à la course de cyclisme sur route masculine, ouverte aux catégories de handicap C4-5, légères déficiences physiques ou mentales.
+
+Le cycliste, originaire de Shiraz en Iran, a été transporté à l'hôpital «où il est malheureusement décédé», a déclaré à l'AFP Craig Spence, porte-parole du Comité international paralympique (IPC).
+
+Selon le comité organisateur, qui donnera une conférence de presse à Rio à 20 h 30 locales (19 h 30, heure de Montréal), Bahman Golbarnezhad a eu son accident vers 10 h 40 locales (9 h 40, heure de Montréal) «sur un tronçon montagneux» de la descente de Grumari, un quartier en bord de mer situé à l'ouest de Rio.
+
+«Il a reçu les premiers soins sur place et au moment d'être transporté à l'hôpital, il a été victime d'un arrêt cardiaque. Il est décédé peu de temps après son hospitalisation», précise l'IPC dans un communiqué.
+
+Selon des informations de presse, l'athlète a perdu le contrôle de son vélo et sa tête a heurté le sol. D'après UOL, un important site d'informations sportives au Brésil, la vitesse des cyclistes peut atteindre les 65 km/h sur ce tronçon.
+
+Aux Jeux olympiques, les cyclistes avaient déjà qualifié le parcours de Grumari «d'exigeant», surtout la descente.
+
+Une enquête pour déterminer les circonstances de son accident a été ouverte.
+
+Sa famille, qui vit en Iran, a été informée de son décès samedi dans l'après-midi et tous les membres de la délégation iranienne présents à Rio ont été réunis dans le village des athlètes.
+
+<br><br> &emsp;
+Pour la première fois de sa carrière, Alexandre Cloutier a même fait appel à la Sûreté du Québec (SQ) à la suite de la publication de «nombreuses insultes violentes et de propos haineux» sur les réseaux sociaux, a-t-il affirmé samedi après-midi lors d'un point de presse à Montréal. «La Sûreté du Québec a mis en place une vigie sur les réseaux sociaux et a demandé à être informé de l'ensemble de mes déplacements», a-t-il ajouté, précisant toutefois n'avoir reçu aucune menace de mort. La SQ n'a «ni confirmé ni infirmé» cette information de nature confidentielle.
+
+Jean-François Lisée a mis le feu aux poudres vendredi soir en écrivant que le prédicateur Adil Charkaoui avait donné son «appui public» à Alexandre Cloutier. Le député de Rosemont faisait alors référence à un message publié mercredi dernier par le Collectif québécois contre l'islamophobie qui soulignait «l'ouverture et le renouveau» d'Alexandre Cloutier et critiquait les positions de M. Lisée.
+    </p>
+  </div>
+
+</div>
+
+<div id="toolbar-options" class="hidden">
+   <a href="#">{{translation here}}</a>
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/jquery.toolbar.js"></script>
+
+<script>
+$('body').mouseup(function() {
+    var text=getSelectedText();
+    if (text!='') alert(text);
+    $(window.getSelection()).toolbar({
+        content: '#toolbar-options',
+      	position: 'top',
+      	style: 'light',
+      	event: 'hover',
+        adjustment: 20
+    });
+});
+
+function getSelectedText() {
+    if (window.getSelection) {
+        return window.getSelection().toString();
+    } else if (document.selection) {
+        return document.selection.createRange().text;
+    }
+    return '';
+}​
+</script>
+
+</html>

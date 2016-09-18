@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Multilingo</title>
+  <link rel="stylesheet" href="css/headlines.css">
+  <link rel="icon"
+  type="image/png"
+  href="img/favicon.png">
+</head>
+
+<nav>
+  <ul>
+    <li><a href="#" class="logo">Multilingo</a></li>
+    <strong>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Learn</a></li>
+      <li><a href="#">Developers</a></li>
+      <li><a href="#">Log Out</a></li>
+    </strong>
+  </ul>
+  <hr noshade>
+</nav>
+
+
+<body ng-app="lingo" ng-controller="ctrl">
+  <h1>
+    Welcome back
+  </h1>
+  <h2>
+    Today's Headlines:
+  </h2>
+  <div id="mainbox">
+    <div class="card">
+      <h4>Science</h4>
+      <div class="story" ng-repeat="story in science">
+        <p>{{story}}</p>
+        <div class="tint">
+          <img src="img/photo.jpg">
+        </div>
+      </div>
+      <div class="story more">More Stories ></div>
+    </div>
+    <div class="card">
+      <h4>Technology</h4>
+      <div class="story" ng-repeat="story in technology">
+        <p>{{story}}</p>
+        <div class="tint">
+          <img src="img/photo.jpg">
+        </div>
+      </div>
+    <div class="story more">More Stories ></div>
+    </div>
+
+
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script>
+  var app = angular.module("lingo", []);
+  app.controller("ctrl", function($scope) {
+    $scope.science = [
+      "Découverte de Franklin navires de l'expédition oppose la science ...",
+      "Les scientifiques décryptent couleur de 'super mignon' dinosaure ...",
+      "Centro comercial Moctezuma",
+      "Ernst Handel",
+    ]
+    $scope.technology = [
+      "les fans d'Apple applaudissent, mais iPhone 7 obtient un accueil discret",
+    ]
+  });
+  </script>
+
+  </html>

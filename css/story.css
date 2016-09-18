@@ -1,0 +1,167 @@
+@font-face {
+    font-family: clan-wide;
+    src: url(../fonts/clan-wide.otf);
+}
+@font-face {
+    font-family: clan;
+    src: url(../fonts/clan.otf);
+}
+@font-face {
+    font-family: tinos;
+    src: url(../fonts/Tinos-Regular.ttf);
+}
+@font-face {
+    font-family: tinos-bold;
+    src: url(../fonts/Tinos-Bold.ttf);
+}
+@font-face {
+    font-family: tinos-italic;
+    src: url(../fonts/Tinos-Italic.ttf);
+}
+
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+height: 100%;
+width: 100%;
+margin: 0;
+overflow-x: hidden;
+overflow-y: scroll;
+background-color: white;
+}
+
+nav {
+  margin-top: 2em;
+  margin-right: 1em;
+    -webkit-font-smoothing: antialiased;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #FA8072;
+  font-size: 1.5em;
+  margin-right: 2em;
+}
+
+hr {
+  border: none;
+background-color: #FA8072;
+color: white;
+height: 1px;
+width: calc(100% - 4em);
+}
+
+.logo {
+  font-family: "clan-wide";
+}
+
+strong {
+  font-family: "clan";
+  font-size: 0.75em;
+  float: right;
+}
+
+h1 {
+  font-family: "tinos";
+  font-size: 4em;
+  color: #FA8072;
+  font-weight: lighter;
+  position: relative;
+  top: -0.5em;
+  left: 0.6em;
+  width: calc(100% - 2em);
+  margin-bottom: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h4 {
+  font-family: "tinos";
+  font-size: 2em;
+  color: #C23828;
+  font-weight: lighter;
+  position: relative;
+  margin: 0;
+  margin-bottom: 0.5em;
+        -webkit-font-smoothing: antialiased;
+}
+
+.card{
+width: calc(100% - 7.5em);
+border-radius: 2px;
+box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+padding: 1em;
+margin: 0em;
+}
+
+.story {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c23828+0,fa8072+100 */
+  background: #c23828; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #c23828 0%, #fa8072 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  #c23828 0%,#fa8072 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  #c23828 0%,#fa8072 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c23828', endColorstr='#fa8072',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+img{
+  width: 100%;
+}
+
+.tint {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px;
+}
+
+.tint:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #C23828;
+  mix-blend-mode: overlay;
+  transition: all .3s linear;
+}
+
+.tint:hover:before { background: none; }
+
+p{
+  font-family: "tinos";
+  color: grey;
+      -webkit-font-smoothing: antialiased;
+  font-size: 1.5em;
+  padding: 1em;
+    margin: 0;
+}
+
+#mainbox{
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+flex-wrap: wrap;
+margin-bottom: 5em;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #C23828;
+}
+
+::selection {
+  color: white;
+  background: #C23828;
+}
