@@ -101,7 +101,7 @@ nav ul li {
   margin-top: 1em;
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (max-width: 980px) {
   nav ul li {
     list-style: none;
     display: inline-block;
